@@ -1,0 +1,235 @@
+% resume.tex
+%
+% (c) 2002 Matthew Boedicker <mboedick@mboedick.org> (original author) http://mboedick.org
+% (c) 2012 Josh Rendek josh@bluescripts.net> http://bluescripts.net/
+%
+%This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike License. To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-sa/1.0/ or send a letter to Creative Commons, 559 Nathan Abbott Way, Stanford, California 94305, USA.
+
+\documentclass[letterpaper,11pt]{article}
+
+%-----------------------------------------------------------
+\usepackage[empty]{fullpage}
+\usepackage{color}
+\usepackage{hyperref}
+\definecolor{myblue}{rgb}{0.93,0.95,1.0}
+
+\hypersetup{ 
+    colorlinks=true,
+    colorlinks=blue,
+    urlcolor=blue
+}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Adjust margins to 0.5in on all sides
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.0in}
+\addtolength{\topmargin}{-0.5in}
+\addtolength{\textheight}{1.0in}
+
+%-----------------------------------------------------------
+%Custom commands
+\newcommand{\resitem}[1]{\item #1 \vspace{-2pt}}
+\newcommand{\resheading}[1]{{\large \colorbox{myblue}{\begin{minipage}{\textwidth}{\textbf{#1 \vphantom{p\^{E}}}}\end{minipage}}}}
+\newcommand{\ressubheading}[4]{
+\begin{tabular*}{7.0in}{l@{\extracolsep{\fill}}r}
+		\textbf{#1} & #2 \\
+		\textit{#3} & \textit{#4} \\
+\end{tabular*}\vspace{-6pt}}
+
+\def\doubleline{
+
+    \vspace{-0.9em}
+    \hspace{\fill}\line(1,0){500}\hspace{\fill}
+
+    \vspace{-2em}
+    \hspace{\fill}\line(1,0){500}\hspace{\fill}
+
+}
+
+
+%-----------------------------------------------------------
+
+
+\begin{document}
+
+\newcommand{\infoheader}{
+\begin{tabular*}{7.5in}{l@{\extracolsep{\fill}}r}
+\textbf{\LARGE Josh Rendek }  & 407-766-3134 (cell) \\ 
+\href{mailto:josh@bluescripts.net}{\nolinkurl{josh@bluescripts.net}} & \url{http://github.com/bluescripts} \\
+\url{http://bluescripts.net/} & \url{http://bitbucket.org/joshrendek} \\
+\end{tabular*}
+\\
+
+\vspace{0.1in}
+}
+
+\newcommand{\pagebreakwithheader}{\pagebreak\infoheader}
+
+\infoheader
+
+\resheading{Introduction}
+I have a passion for optimizing and analyzing systems to get the most performance out of an application. I also enjoy opportunities to work with Big Data and applications at scale. I love duck typing and learning new languages and consider myself to be apart of the devops and polygot developer cultures.
+\linebreak
+
+\resheading{Skills}
+
+\begin{description}
+    \item[Languages:] \hfill \\
+        | Ruby \textit{(2008-Present)} 
+        | Java (focus on Android) \textit{(1.5 Years)} 
+        | HTML, CSS, JavaScript \textit{(2005-Present)} 
+        | C \textit{(2 Years)} 
+        | Python \textit{(1.5 Years)} 
+        | PHP \textit{(2007-Present)}
+    \item[Databases:] \hfill  \\
+        | MySQL \textit{(2006-Present)} 
+        | MongoDB \textit{(1.5 Years)}
+    \item[Frameworks:] \hfill \\
+        | Rails \textit{(2008-Present)} 
+        | Rspec \textit{(2010-Present)}    
+        | Sinatra \textit{(2010-Present)} 
+    \item[Operating Systems:] \hfill \\
+        | Mac OSX   
+        | Debian-based distros \textit{(2010-Present)}
+        | Redhat-based distros \textit{(2005-Present)}
+        | Windows   
+        | FreeBSD(5-7) \textit{(3 Years)}
+    \item[Other:] \hfill \\
+        | Vim       
+        | Git       
+        | nginx     
+        | unicorn   
+        | LigHTTPd  
+        | mongrel   
+        | thin      
+        | Apache   
+        | SendMail
+        | Postfix  
+        | Dovecot 
+        | SpamAssasin 
+        | Photoshop 
+    \item[(Learning):] \hfill \\
+        | Erlang 
+        | Scala 
+        | C\#
+\end{description}
+
+\resheading{Work Experience}
+\ressubheading{Department of Management Services, State of Florida}{Tallahassee, FL}{Software Engineer \& Systems Configuration, Applications Programmer III}{October 2011 - Present}
+\begin{itemize}
+        \resitem{Overview} 
+        \begin{itemize}
+                \resitem{Promoted TDD and a better focus on testing and documentation}
+                \resitem{Lead the migration from Solaris/Apache/Passenger to CentOS/Nginx/Unicorn}
+                \resitem{Lead the migration from REE to 1.9.x}
+                \resitem{Re-designed UI using bootstrap, promoted as standard look and feel for all applications}
+                \resitem{Promoted the use of modern project management software and development life cycles}
+        \end{itemize}
+        \resitem{FLEET Tracking System}
+        \begin{itemize}
+                \resitem{Rails 3.x, MySQL backend}
+                \resitem{SASS, Delayed Jobs}
+        \end{itemize}
+        \resitem{Other Applications}
+        \begin{itemize}
+                \resitem{Rails 2.3, 3.x MySQL backend}
+                \resitem{Involved in maintenance of legacy applications and documenting those systems}
+        \end{itemize}
+\end{itemize}
+
+\pagebreakwithheader
+
+\ressubheading{BlueScripts L.L.C.}{Tallahassee, FL}{Owner}{2008-Present (Incorporated 2011)}
+\begin{itemize}
+        \resitem{FSU Psychology Android Tablet Application \textit{(2011)}}
+        \begin{itemize} 
+                \resitem{Application to track people moving through parking lot by observation through drawing on an overlay}
+        \end{itemize}
+
+        \resitem{\url{Servly.com} \textit{(2009-Present)}}
+        \begin{itemize} 
+                \resitem{Designed the main sales page and integrated WHCMS with Servly Rails App}
+                \resitem{Developed and Designed the entire application}
+                \resitem{Optimized database and server configurations for high concurrency}
+        \end{itemize}
+
+        \resitem{\url{Notecardapp.com} \textit{(2008-Present)}}
+        \begin{itemize}
+                \resitem{Note card application for studying cards online}
+        \end{itemize}
+\end{itemize}
+
+
+\ressubheading{\href{http://orlandophil.org/}{Orlando Philharmonic Orchestra}}{Tallahassee, FL}{Software Engineer, Consultant}{August, 2009 - Present}
+\begin{itemize} 
+        \resitem{Developed a custom Rails 2.3 shopping cart application focusing on the way Orchestra's do business}
+        \resitem{Minimal graphics work}
+        \resitem{Wordpress management and staff training}
+\end{itemize}
+
+\ressubheading{BlueLite L.L.C.}{Tallahassee, FL}{Software \& Systems Engineer, Vice President}{2010 - October, 2011}
+\begin{itemize} 
+        \resitem{Created a Rails 3 billing and software management system and integrated with Authorize.net CIM}
+        \resitem{Maintained and setup the linux servers}
+        \resitem{Maintained the test environment using virtual machines}
+\end{itemize}
+
+\ressubheading{Underground Tournaments L.L.C.}{Tallahassee, FL}{Software \& Systems Engineer, Partner}{2005 - October, 2011}
+\begin{itemize} 
+        \resitem{Created a client/server communications sytem in PHP to manage Ventrilo services} 
+        \resitem{Created a custom billing solution that integrated with PayPal and Authorize.net}
+        \resitem{Created a custom server monitoring solution}
+        \resitem{Maintained and setup FreeBSD 5.x-7.x and CentOS servers}
+        \resitem{Created the client and adminstration user interfaces and graphics}
+        \resitem{Helped answer cusomer support}
+        \resitem{Used MySQL as the backend for all services}
+        \resitem{Created a reseller system with a Ruby on Rails backend and a PHP front end}
+        \resitem{Created a refresh of the billing system in Ruby on Rails}
+        \resitem{Managed over 20 servers across the country and diagnosed and analyzed network and performance issues}
+\end{itemize}
+
+\ressubheading{MyGuildHost L.L.C.}{Tallahassee, FL}{Software \& Systems Engineer}{2008 - October, 2011}
+\begin{itemize} 
+        \resitem{Designed the sales website, several templates, and the administration interface}
+        \resitem{Created a custom content management system with a focus on the gaming community}
+        \resitem{Integrated with UltraDNS for managing server distribution}
+\end{itemize}
+
+
+\pagebreakwithheader
+
+\ressubheading{FragNServers L.L.C.}{Tallahassee, FL}{Software \& Systems Engineer}{2007 - 2008}
+\begin{itemize} 
+        \resitem{Created a client/server communications system in PHP to manage game servers and services}
+        \resitem{Created a custom billing solution}
+        \resitem{Managed FreeBSD 6.x servers, and setup sendmail + Spam Assasin}
+\end{itemize}
+
+\ressubheading{HearMeRoR.org}{Tallahassee, FL}{Personal Project}{2010 - Present}
+\begin{itemize} 
+        \resitem{A work in progress. Intended to be a community site focused on sharing code snippets, ideas, designs, and questions.}
+\end{itemize}
+
+\ressubheading{Florida Fund Foundation}{Tallahassee, FL}{Designer \& Site Administrator}{2008 - Present}
+\begin{itemize} 
+        \resitem{Created a design and integrated it with Wordpress}
+        \resitem{Created a custom forms application to take business and application information.}
+\end{itemize}
+
+\ressubheading{Capitol Alliance Group}{Tallahassee, FL}{Designer \& Site Administrator}{2008 - Present}
+\begin{itemize} 
+        \resitem{Created a Flash intro animation}
+        \resitem{Created a design and integrated it with Wordpress}
+\end{itemize}
+
+\ressubheading{Sharkey's Coffee}{Tallahassee, FL}{Software Engineer \& Site Administrator}{2008 - 2010}
+\begin{itemize} 
+        \resitem{Created a design and integrated it with Wordpress}
+        \resitem{Created a custom online ordering system in Rails 2.3 to accept orders online and deliver them in-store via fax}
+\end{itemize}
+
+
+\end{document}
