@@ -5,15 +5,16 @@
 %
 %This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike License. To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-sa/1.0/ or send a letter to Creative Commons, 559 Nathan Abbott Way, Stanford, California 94305, USA.
 
-\documentclass[letterpaper,11pt]{article}
+\documentclass[a4paper,11pt,sans]{article}
 
 %-----------------------------------------------------------
 \usepackage[empty]{fullpage}
 \usepackage{color}
 \usepackage{hyperref}
-\definecolor{myblue}{rgb}{0.93,0.95,1.0}
+\definecolor{myblue}{RGB}{52,107,166}
+%52	107	166
 
-\hypersetup{ 
+\hypersetup{
     colorlinks=true,
     colorlinks=blue,
     urlcolor=blue
@@ -57,7 +58,7 @@
 
 \newcommand{\infoheader}{
 \begin{tabular*}{7.5in}{l@{\extracolsep{\fill}}r}
-\textbf{\LARGE Josh Rendek }  & 407-766-3134 (cell) \\ 
+\textbf{\LARGE Josh Rendek }  & 407-766-3134 (cell) \\
 \href{mailto:josh@joshrendek.com}{\nolinkurl{josh@joshrendek.com}} & \url{https://github.com/joshrendek} \\
 \url{http://joshrendek.com/} & \url{http://bitbucket.org/joshrendek} \\
 \end{tabular*}
@@ -70,63 +71,89 @@
 
 \infoheader
 
-\resheading{Introduction}
-I love working on hard problems, system and test automation, scaling/performance problems, and data mining.
-I always want to be learning new things and finding the right solution for the problem at hand. I am a fullstack developer and love helping others learn.
-I also enjoy writing from time to time on my blog.
+\resheading{\color{white} Introduction}
+\hspace{3pt} \\
+I am a full stack developer with a passion for learning new things, especially security related. I tend to focus on automation over manual (builds, deployments, etc)
+and favor picking the right tool for the job over being evangelical about one language.
 \linebreak
 
-\resheading{Skills}
+\resheading{\color{white} Skills}
 
 \begin{description}
     \item[Languages:] \hfill \\
-        | Ruby (and JRuby) \textit{(2008-Present)}
+        | Golang \textit{(2014-present)}
+        | React \textit{(2014-present)}
+        | Ruby/Rails \textit{(2008-Present)}
+        | JRuby \textit{(2012-2014)}
         | Java (focus on Android) \textit{(1.5 Years)}
+        | Scala \textit{(2014)}
         | HTML, CSS, JavaScript \textit{(2005-Present)}
         | C \textit{(2 Years)}
         | Python \textit{(1.5 Years)}
-        | PHP \textit{(2007-2011)}
+        | PHP \textit{(2007-2011,2015)}
     \item[Databases:] \hfill  \\
         | PostgreSQL \textit{(2013-Present)}
         | MySQL \textit{(2006-Present)}
         | MongoDB \textit{(2011-2013)}
         | ElasticSearch \textit{(2012-Present)}
         | Redis/Memcached \textit{(2011-Present)}
-    \item[Operating Systems:] \hfill \\
+    \item[Operating Systems/Virtualization:] \hfill \\
+        | Docker
+        | KVM
+        | VirtualBox
         | Mac OSX
-        | Debian-based distros \textit{(2010-Present)}
-        | Redhat-based distros \textit{(2005-Present)}
-        | Windows
-        | FreeBSD(5-7) \textit{(3 Years)}
+        | Debian-based distros \textit{(Debian/Ubuntu/Mint)}
+        | Redhat-based distros \textit{(CentOS/RHEL/OEL)}
+        | Windows XP, 7
+        | FreeBSD 5-7, 10
     \item[Other:] \hfill \\
-        | Rails \textit{(2008-Present)}
+        | AWS (EC2, ASG, ELB, RDS, EC, S3, CF, EB, Launch Configs, VPC, ECS, Route53, IAM, SES, SNS) \textit{(2012-Present)}
+        | Ansible \textit{(2013-Present)}
+        | InfluxDB
+        | StatsD
+        | Grafana
         | Torquebox
-        | Rspec \textit{(2010-Present)}
-        | Sinatra \textit{(2010-Present)}
+        | Rspec
+        | Sinatra
         | Chef (2012-Present)
         | Zabbix (2012-Present)
+        | Emacs
         | Vim
-        | Data mining
         | Git
         | nginx
         | unicorn
         | LigHTTPd
+        | Puma
         | mongrel
         | thin
         | Apache
         | SendMail
         | Postfix
         | Dovecot
+        | OpenVPN
         | SpamAssasin
-    \item[(Learning):] \hfill \\
-        | Erlang
-        | Scala
-        | C\#
+
 \end{description}
 
-\resheading{Work Experience}
+\resheading{\color{white} Work Experience}
 
-\ressubheading{ThreatTrack Security (formerly a part of GFI Software)}{Clearwater, FL}{Software Engineer \& DevOps}{June 2012-Present}
+\ressubheading{Articulate, Inc.}{Remote}{Software Engineer \& DevOps}{April 2014-Present}
+
+\hspace{5pt} \\
+
+Gave talks on topics like microservices, Golang, and using Docker. Focus on code quality and meeting deliverables using Ruby, Rails, Coffeescript, React, Golang. Focus on backend development and breaking out into microservices where possible. Co-ordinated a lot of cross-team efforts to get parts of the product integrated. Assisted with build issues when they arose (Jenkins). Focused on delivering an MVP and minimizing scope creep.
+
+\hspace{5pt} \\
+
+\ressubheading{SysWard}{Remote}{Founder}{2014-Present}
+
+\hspace{5pt} \\
+
+Started a multi-operating system patch management SaaS that covered security alerting for Ubuntu, Debian, CentOS, Redhat, and other operating systems. Performance critical portions were written in Golang. Wrote several tools to manage Docker environments and deploy to AWS. Front-end made with ReactJS. \url{https://sysward.com/}
+
+\hspace{5pt} \\
+
+\ressubheading{ThreatTrack Security (formerly a part of GFI Software)}{Clearwater, FL \& Remote}{Software Engineer \& DevOps}{June 2012-April 2014}
 
 \hspace{5pt} \\
 Implemented and gave presentations on the usage and reasons to use Chef for configuration management. Strong focus on monitoring and root cause analysis in addition to capacity planning. Continued to create and improve documentation for systems. Created a
@@ -149,15 +176,13 @@ Re-designed the UI of several applications using Bootstrap. Promoted the use of 
   \line(1,0){250}
 \end{center}
 
-\pagebreak
-
-\ressubheading{BlueScripts L.L.C.}{Tallahassee, FL}{Owner}{2008-Present (Incorporated 2011)}
+\ressubheading{BlueScripts L.L.C.}{Remote}{Owner}{2008-Present (Incorporated 2011)}
 
 \setlength{\parindent}{15pt}
 
 \hspace{5pt} \\
 
-Scrapes the FSU course list and allows a student to plan their semester with their friends. Integrates with Facebook and the ISBN db for book purchases. 
+Scrapes the FSU course list and allows a student to plan their semester with their friends. Integrates with Facebook and the ISBN db for book purchases.
 Source available: \url{https://github.com/joshrendek/classopoly/}
 
 \subparagraph{FSU Department of Psychology} \hspace{5pt} \\
@@ -179,7 +204,7 @@ A simple notecard application that integrated with facebook for creating flashca
 \end{center}
 
 
-\ressubheading{\href{http://orlandophil.org/}{Orlando Philharmonic Orchestra}}{Tallahassee, FL}{Software Consultant}{August, 2009 - Present}
+\ressubheading{\href{http://orlandophil.org/}{Orlando Philharmonic Orchestra}}{Remote}{Software Consultant}{August, 2009 - Present}
 
 \hspace{5pt} \\
 
@@ -191,7 +216,7 @@ Developed and maintained a shopping cart in Rails 2.3 with a focus on user exper
 \end{center}
 
 
-\ressubheading{BlueLite L.L.C.}{Tallahassee, FL}{Software \& Systems Engineer, Vice President}{2010 - October, 2011}
+\ressubheading{BlueLite L.L.C.}{Remote}{Software \& Systems Engineer, Vice President}{2010 - October, 2011}
 
 \hspace{5pt} \\
 
@@ -203,7 +228,7 @@ Setup and maintenance of various linux servers and test environments.
   \line(1,0){250}
 \end{center}
 
-\ressubheading{Underground Tournaments L.L.C.}{Tallahassee, FL}{Software \& Systems Engineer, Partner}{2005 - October, 2011}
+\ressubheading{Underground Tournaments L.L.C.}{Remote}{Software \& Systems Engineer, Partner}{2005 - October, 2011}
 
 \hspace{5pt} \\
 
@@ -223,7 +248,7 @@ Managed over 20 servers across the country and diagnosed and analyzed network an
 \end{center}
 
 
-\ressubheading{MyGuildHost L.L.C.}{Tallahassee, FL}{Software \& Systems Engineer}{2008 - October, 2011}
+\ressubheading{MyGuildHost L.L.C.}{Remote}{Software \& Systems Engineer}{2008 - October, 2011}
 
 \hspace{5pt} \\
 
