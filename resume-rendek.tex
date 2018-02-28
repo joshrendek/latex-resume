@@ -73,8 +73,10 @@
 
 \resheading{\color{white} Introduction}
 \hspace{3pt} \\
-I am a full stack developer with a passion for learning new things, especially security related. I tend to focus on automation over manual (builds, deployments, etc)
-and favor picking the right tool for the job over being evangelical about one language.
+I am a full stack developer with a passion for anything security related. I love building scalable systems and focusing on customer / end user outcomes. My outside interests include wood working, cooking, video games, and gardening.
+
+\linebreak
+
 \linebreak
 
 \resheading{\color{white} Skills}
@@ -82,12 +84,12 @@ and favor picking the right tool for the job over being evangelical about one la
 \begin{description}
     \item[Languages:] \hfill \\
         | Golang \textit{(2014-present)}
-        | React \textit{(2014-present)}
         | Ruby/Rails \textit{(2008-Present)}
+        | React \textit{(2014-2017)}
         | JRuby \textit{(2012-2014)}
         | Java (focus on Android) \textit{(1.5 Years)}
         | Scala \textit{(2014)}
-        | HTML, CSS, JavaScript \textit{(2005-Present)}
+        | HTML, CSS, JavaScript, CoffeScript \textit{(2005-Present)}
         | C \textit{(2 Years)}
         | Python \textit{(1.5 Years)}
         | PHP \textit{(2007-2011,2015)}
@@ -99,6 +101,7 @@ and favor picking the right tool for the job over being evangelical about one la
         | Redis/Memcached \textit{(2011-Present)}
         | RabbitMQ \textit{(2014-Present)}
     \item[Operating Systems/Virtualization:] \hfill \\
+        | Kubernetes (2017-Present)
         | Docker (2014-Present)
         | KVM
         | VirtualBox
@@ -108,8 +111,10 @@ and favor picking the right tool for the job over being evangelical about one la
         | Windows XP, 7, 10
         | FreeBSD 5-7, 10
     \item[Other:] \hfill \\
+        | Helm \textit{(2017-Present)}  
         | AWS (EC2, ASG, ELB, RDS, EC, S3, CF, EB, Launch Configs, VPC, ECS, Route53, IAM, SES, SNS) \textit{(2012-Present)}
         | Ansible \textit{(2013-Present)}
+        | Terraform \textit{(2015-Present)}
         | InfluxDB
         | StatsD
         | Logstash
@@ -139,12 +144,78 @@ and favor picking the right tool for the job over being evangelical about one la
 \end{description}
 
 \resheading{\color{white} Work Experience}
+\hspace{5pt} \\
 
-\ressubheading{Security Scorecard}{Remote}{Lead DevOps Engineer}{June 2015-Present}
+\ressubheading{DataPipe}{Remote}{Application Security Platform Engineer}{March 2017-March 2018}
 
 \hspace{5pt} \\
 
-Moved all servers to use Ansible as configuration management. Worked to find and build a hybrid solution (mix of dedicated / AWS) for our infrastructure. Heavy focus on performance optimizations with Go-lang and security tools like nmap, took lead on building out different tools and automation using Go. Built from the ground up a (Shodan-like) tool to scan the entire internet using masscan and nmap. Setup monitoring stack using Grafana, StatsD, InfluxDB for application metrics, Zabbix for alerting and server monitoring, and the ELK stack for log aggregation. Wrote tooling and libraries in Go to clean up projects, helped educate others on Go best practices. Migrated disparate server environments and one-off-tools to Docker and deployed via Jenkins/Ansible. Setup build environment and automation for all projects using Jenkins, Docker, and Ansible, including security and auditing tools to run on every build to check for vulnerabilities.
+Built a container scanning pipeline system to provide static analysis of the container operating system and packages, as well as analysis of the applications' language packages to check for insecure packages in golang. Built administration tooling in Ruby on Rails. 
+
+\hspace{5pt} \\
+
+Built a WAF with microsecond response times in golang to protect customer applications from things like directory traversal, DNS checks (against known black lists), HTTP verb checking, SQL injection, XSS injection, CSP enforcement, Content-Type enforcement, and X-Frame enforcement. Built tooling and a test suite around this to verify different types of attacks, as well as the ability to replay ELB logs from already deployed applications to ensure applications wouldn't break. Ability to deploy it as a sidecar application/helm dependency so it was easy to integrate with existing applications for customers.
+
+\hspace{5pt} \\
+
+Built out several kubernetes controllers/operators to enable customer deployments and integration with things like secret storage, automatic oauth client generation, and existing legacy applications. Added per-tenant encryption to a shared secret system to ensure all customer data was secured at rest and in transit. 
+
+\hspace{5pt} \\
+
+Created a release management system to enable developers to continuously deploy as well as provide a tracking and promotion mechanism for higher level environments (ie, dev to staging to prod) that integrated with helm, kubernetes, and our cicd process. 
+
+\hspace{5pt} \\
+
+Lead a cross-team group for several months to ensure customer success by focusing on end-to-end integration of the product from customer standup to application installation on the tenant kubernetes clusters. 
+
+
+\hspace{5pt} \\
+\hspace{5pt} \\
+
+\ressubheading{Security Scorecard}{Remote}{Lead DevOps Engineer}{June 2015-March 2017}
+
+\hspace{5pt} \\
+
+Moved all servers to use Ansible as configuration management, as well
+as teaching other teams how to use configuration management. Worked
+to find and build a hybrid solution (mix of dedicated / AWS) for our
+security scanning infrastructure and performance needs, including procurement in Europe and China. Heavy focus on performance
+optimizations with Go-lang and security tools like nmap; took lead on
+building out different tools and automation using Go. 
+
+\hspace{5pt} \\
+
+Built,
+scaled, and setup monitoring for our elasticsearch clusters with over 50
+billion documents. Lead the effort to consolidate disparate http
+services/endpoints and redis servers and move towards a queueing infrastructure with
+RabbitMQ for reliability. Scaled and debugged RMQ issues at scale. Converted a large MySQL DB to Postgres with a final cutover and zero downtime. Managed elasticsearch upgrades on clusters with tens of billions of documents across multiple point and major releases.
+
+\hspace{5pt} \\
+
+
+Built from the
+ground up a (Shodan-like) tool to scan the entire internet using
+masscan and nmap, Go-lang, RabbitMQ and elasticsearch.
+
+\hspace{5pt} \\
+
+Setup monitoring stack using Grafana, StatsD,
+InfluxDB for application metrics, Zabbix for alerting and server
+monitoring, and the ELK stack for log aggregation. Wrote tooling and
+libraries in Go to clean up projects, helped educate others on Go best
+practices. Migrated disparate server environments and one-off-tools to
+Docker and deployed via Jenkins/Ansible. 
+
+\haspace{5pt} \\
+
+Setup build environment and
+automation for all projects using Jenkins, Docker, and Ansible,
+including security and auditing tools to run on every build to check
+for vulnerabilities. Lead the way in implementing tests for both rails
+and go projects. Gave talks on various topics for security,
+docker, and infrastructure automation. Built several tools in house to
+audit AWS security groups and github permissions automatically.
 
 \hspace{5pt} \\
 
@@ -270,5 +341,13 @@ Integrated with UltraDNS for managing server distribution.
 \begin{center}
   \line(1,0){250}
 \end{center}
+
+\resheading{\color{white} Education}
+
+\ressubheading{Bachelor of Science (B.S), Computer Science, Incomplete}{2008-2013}{Florida State University}{}
+
+\hspace{5pt} \\
+
+Studies unfinished, took full time job offer at GFI/ThreatTrack. 121 credit hours completed. 
 
 \end{document}
